@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
@@ -10,7 +8,7 @@ class Checkout extends Component {
   state = {
     ingredients: null,
     price: 0
-  };
+  }
 
   componentWillMount() {
     const query = new URLSearchParams(this.props.location.search);
@@ -29,11 +27,11 @@ class Checkout extends Component {
 
   checkoutCancelledHandler = () => {
     this.props.history.goBack();
-  };
+  }
 
   checkoutContinuedHandler = () => {
     this.props.history.replace('/checkout/contact-data');
-  };
+  }
 
   render() {
     return (

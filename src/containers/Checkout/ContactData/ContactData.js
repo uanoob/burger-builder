@@ -14,14 +14,14 @@ class ContactData extends Component {
       postalCode: ''
     },
     loading: false
-  };
+  }
 
   orderHandler = event => {
     event.preventDefault();
     this.setState({ loading: true });
     const order = {
       ingredients: this.props.ingredients,
-      price: this.props.totalPrice,
+      price: this.props.price,
       customer: {
         name: 'uanoob',
         adress: {
@@ -57,7 +57,7 @@ class ContactData extends Component {
           className={classes.Input}
           type="email"
           name="email"
-          placeholder="Your M ail"
+          placeholder="Your Mail"
         />
         <input
           className={classes.Input}
@@ -71,7 +71,7 @@ class ContactData extends Component {
           name="postal"
           placeholder="Postal Code"
         />
-        <Button btnType="Success" clickes={this.orderHandler}>
+        <Button btnType="Success" clicked={this.orderHandler}>
           ORDER
         </Button>
       </form>
