@@ -93,7 +93,7 @@ class ContactData extends Component {
       }
     },
     formIsValid: false
-  };
+  }
 
   orderHandler = event => {
     event.preventDefault();
@@ -110,7 +110,7 @@ class ContactData extends Component {
       orderData: formData
     };
     this.props.onOrderBurger(order);
-  };
+  }
 
   checkValidity(value, rules) {
     let isValid = true;
@@ -147,7 +147,7 @@ class ContactData extends Component {
     }
 
     this.setState({ orderForm: updatedOrderForm, formIsValid: formIsValid });
-  };
+  }
   render() {
     const formElementsArray = [];
     for (let key in this.state.orderForm) {
